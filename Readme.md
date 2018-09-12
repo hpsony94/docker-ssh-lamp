@@ -10,3 +10,10 @@
 docker network create -o "com.docker.network.bridge.host_binding_ipv4"="171.244.27.177" bridge_eth1
 
 Ref to: https://github.com/docker/compose/issues/2999
+
+
+Download https://www.phpmyadmin.net/downloads/ into /www/html/phpadmin 
+
+Login with 
+User: root
+Pass: at step (2)
