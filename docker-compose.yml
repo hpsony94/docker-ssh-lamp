@@ -9,9 +9,15 @@ services:
           - ./app:/app
           - ./mysql:/var/lib/mysql
           - ./var_log:/var/log
+          - ./www:/var/www
         ports:
-          - "2080:80" # Both 2080 and 8000 port are using apache
-          - "2022:22"
-          - "2036:3306"
+          - "80:80" # Both 2080 and 8000 port are using apache
+          - "1022:22"
+          - "3306:3306"
+        networks:
+          - bridge_eth1
         container_name: "docker-ssh-lamp"
         entrypoint: /app/docker_start.sh
+networks:
+    bridge_eth1:
+        external: true
